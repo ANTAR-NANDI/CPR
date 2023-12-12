@@ -1,0 +1,26 @@
+ e.innerHTML = "<td><input type='text' name='product_name' onkeypress='invoice_productList(" + count + ");' class='form-control productSelection common_product' placeholder='Product Name' id='product_name_" + count + "' required tabindex='" + tab1 + "'><input type='hidden' class='common_product autocomplete_hidden_value  product_id_" + count + "' name='product_id[]' id='product_id_" + count + "'>" +
+        "<a href='#' class='client-add-btn btn btn-success open-modal-button' data-serial='" + count + "' aria-hidden='true' data-toggle='modal' data-target='#product_add'>" +
+        "<i class='ti-plus m-r-6'></i>" +
+        "</a>" +
+        "</td><td> <input type='text' name='stock[]' required='required' onkeyup='quantity_calculate(" + count + ");' onchange='quantity_calculate(" + count + ");' id='stock_" + count + "' class='stock_" + count + " form-control text-right'  placeholder='0.00' min='0' tabindex='" + tab2 + "'/></td><td><input type='text' name='purchase_price_[]' onkeyup='quantity_calculate(" + count + ");' onchange='quantity_calculate(" + count + ");' id='purchase_price_" + count + "' class='purchase_price_" + count + " form-control text-right' required placeholder='0.00' min='0' tabindex='" + tab3 + "'><br>" +
+        "<a href='#' class='btn btn-info open-modal-purchase open-modal-button' data-serial='" + count + "' aria-hidden='true' data-toggle='modal' data-target='#purchase_add'>" +
+        "Add Purchase" +
+        "</a>" +
+        "</td><td><input type='text' name='selling_price[]' onkeyup='quantity_calculate(" + count + ");' onchange='quantity_calculate(" + count + ");' id='selling_price_" + count + "' class='form-control text-right selling_price' placeholder='0.00' min='0' tabindex='" + tab4 + "' /></td><td> <input type='text' name='deduction_fund[]' required='required' onkeyup='quantity_calculate(" + count + ");' onchange='quantity_calculate(" + count + ");' id='deduction_fund_" + count + "' class='deduction_fund_" + count + " deduction_fund form-control text-right'  placeholder='0.00' min='0' tabindex='" + tab2 + "'><br>" +
+        "<a href='#' class='btn btn-info open-modal-deduction_button open-modal-button' data-serial='" + count + "' aria-hidden='true' data-toggle='modal' data-target='#deduction_add'>" +
+        "Add Deduction" +
+        "</a><a href='#' class='btn btn-info open-modal-view_deduction' data-serial='" + count + "' aria-hidden='true' data-toggle='modal' data-target='#view_deduction'>" +
+        "View" +
+        "</a>" +
+        "</td><td><input class='datepicker form-control' type='text' size='50' name='invoice_date' id='date' required value='' tabindex='6'><input type='text' name='claim_percentage[]' onkeyup='quantity_calculate(" + count + ");' onchange='quantity_calculate(" + count + ");' id='claim_percentage_" + count + "' class='claim_percentage form-control text-right' required placeholder='0.00' min='0' tabindex='" + tab3 + "'></td>",
+                document.getElementById(t).appendChild(e),
+                // document.getElementById(a).focus(),
+                document.getElementById("add_invoice_item").setAttribute("tabindex", tab6);
+        document.getElementById("paidAmount").setAttribute("tabindex", tab7);
+        document.getElementById("full_paid_tab").setAttribute("tabindex", tab8);
+        document.getElementById("add_invoice").setAttribute("tabindex", tab9);
+        count++
+
+
+
+        
