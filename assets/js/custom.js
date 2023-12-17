@@ -241,11 +241,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -542,11 +542,11 @@ $(document).ready(function () {
     ],
   });
   outlet_id = $("#outlet_id").val();
-    technician_id = $("#technician_id").val();
-    from_date = $("#from_date").val();
-    to_date = $("#to_date").val();
-    payment_status = $("#payment_status").val();
-    delivery_status = $("#delivery_status").val();
+  technician_id = $("#technician_id").val();
+  from_date = $("#from_date").val();
+  to_date = $("#to_date").val();
+  payment_status = $("#payment_status").val();
+  delivery_status = $("#delivery_status").val();
   var total_service_invoice = $("#total_service_invoice").val();
   var service_invoice_list = $("#service_invoice_list").DataTable({
     aaSorting: [[0, "asc"]],
@@ -570,7 +570,7 @@ $(document).ready(function () {
         extend: "csv",
         ttitle: "Service List",
         exportOptions: {
-          columns: [0, 1,2,3,4,5,6,7,8,9,10,11,12,13,14], //Your Colume value those you want
+          columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], //Your Colume value those you want
         },
         className: "btn-sm prints",
       },
@@ -578,7 +578,7 @@ $(document).ready(function () {
         extend: "excel",
         title: "Service List",
         exportOptions: {
-          columns: [0, 1,2,3,4,5,6,7,8,9,10,11,12,13,14], //Your Colume value those you want
+          columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], //Your Colume value those you want
         },
         className: "btn-sm prints",
       },
@@ -586,7 +586,7 @@ $(document).ready(function () {
         extend: "pdf",
         title: "Service List",
         exportOptions: {
-          columns: [0, 1,2,3,4,5,6,7,8,9,10,11,12,13,14], //Your Colume value those you want
+          columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], //Your Colume value those you want
         },
         className: "btn-sm prints",
       },
@@ -594,7 +594,7 @@ $(document).ready(function () {
         extend: "print",
         title: "Service List",
         exportOptions: {
-          columns: [0, 1,2,3,4,5,6,7,8,9,10,11,12,13,14], //Your Colume value those you want
+          columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], //Your Colume value those you want
         },
         title: "<center>Service List</center>",
         className: "btn-sm prints",
@@ -624,10 +624,10 @@ $(document).ready(function () {
       { data: "technician_name" },
       { data: "technician_percentage" },
       { data: "deductions" },
-      { data: "total_amount", class: "total_amount text-right"},
-      { data: "paid_amount" ,class: "paid_amount text-right"},
-      { data: "due_amount",class: "due_amount text-right" },
-      { data: "technician_amount",class: "technician_amount text-right" },
+      { data: "total_amount", class: "total_amount text-right" },
+      { data: "paid_amount", class: "paid_amount text-right" },
+      { data: "due_amount", class: "due_amount text-right" },
+      { data: "technician_amount", class: "technician_amount text-right" },
       { data: "delivery_date" },
       { data: "payment_status" },
       { data: "status" },
@@ -688,7 +688,7 @@ $(document).ready(function () {
           $(this.footer()).html(sum.toLocaleString());
         });
 
-      
+
     },
   });
   $("#outlet_id,#technician_id,#from_date,#to_date,#payment_status,#delivery_status").on("change", function (e) {
@@ -1070,11 +1070,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -1173,11 +1173,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -1277,11 +1277,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -1854,11 +1854,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
@@ -2027,11 +2027,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
@@ -2047,11 +2047,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -2186,11 +2186,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
@@ -2206,11 +2206,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       api
@@ -2225,11 +2225,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -2475,11 +2475,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
@@ -2495,11 +2495,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
@@ -2515,11 +2515,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -2694,11 +2694,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
@@ -2714,11 +2714,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -2952,11 +2952,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       api
@@ -2971,11 +2971,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -3209,11 +3209,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       api
@@ -3228,11 +3228,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -3954,11 +3954,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Cost Price
@@ -3974,11 +3974,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Vat Price
@@ -3994,11 +3994,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Vat Price
@@ -4014,11 +4014,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Net Sales
@@ -4034,11 +4034,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Cost Price
@@ -4054,11 +4054,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
@@ -4075,11 +4075,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -4213,11 +4213,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total gross profit
@@ -4233,11 +4233,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //Cost Price
@@ -4253,11 +4253,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Vat Price
@@ -4273,11 +4273,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Vat Price
@@ -4293,11 +4293,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Net Sales
@@ -4313,11 +4313,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Cost Price
@@ -4333,11 +4333,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
@@ -4354,11 +4354,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -4514,11 +4514,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Vat Price
@@ -4534,11 +4534,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -4549,7 +4549,7 @@ $(document).ready(function () {
   "use strict";
   var CSRF_TOKEN = $('[name="csrf_test_name"]').val();
   var base_url = $("#base_url").val();
-   var supplier_id = $("#supplier_id").val();
+  var supplier_id = $("#supplier_id").val();
   var currency = $("#currency").val();
   var from_date = $("#from_date").val();
   var to_date = $("#to_date").val();
@@ -4558,7 +4558,7 @@ $(document).ready(function () {
   $("#technician_id,#from_date, #to_date,#outlet_id").on("change", function (e) {
     from_date = $("#from_date").val();
     to_date = $("#to_date").val();
-    technician_id =  $("#technician_id").val();
+    technician_id = $("#technician_id").val();
     outlet_id = $("#outlet_id").val();
     table.ajax.reload();
   });
@@ -4645,6 +4645,7 @@ $(document).ready(function () {
     columns: [
       { data: "sl" },
       { data: "service_invoice_id" },
+      { data: "purchase_id" },
       { data: "invoice_date" },
       { data: "technician_name" },
       { data: "customer_name" },
@@ -4670,7 +4671,12 @@ $(document).ready(function () {
       },
       { data: "net_salary", class: "net_salary text-right" },
       // { data: "dc", class: "text-right" },
-      { data: "cpr_amount", class: "cpr_amount text-right" }
+      { data: "cpr_amount", class: "cpr_amount text-right" },
+      { data: "supplier_payment_status" },
+      ,
+      { data: "technician_payment_status" },
+      {
+       data: "delivery_status" },
     ],
     footerCallback: function (row, data, start, end, display) {
       var api = this.api();
@@ -4687,11 +4693,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Cost Price
@@ -4707,11 +4713,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Vat Price
@@ -4727,11 +4733,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Vat Price
@@ -4747,11 +4753,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Net Sales
@@ -4767,11 +4773,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Cost Price
@@ -4787,11 +4793,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
@@ -4808,15 +4814,15 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
-        api
+      api
         .columns(".cpr_amount", {
           page: "current",
         })
@@ -4828,11 +4834,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -4847,12 +4853,12 @@ $(document).ready(function () {
   var from_date = $("#from_date").val();
   var to_date = $("#to_date").val();
   var outlet_id = $("#outlet_id").val();
-  var supplier_id =  $("#supplier_id").val();
+  var supplier_id = $("#supplier_id").val();
 
   $("#supplier_id,#from_date, #to_date,#outlet_id").on("change", function (e) {
     from_date = $("#from_date").val();
     to_date = $("#to_date").val();
-    supplier_id =  $("#supplier_id").val();
+    supplier_id = $("#supplier_id").val();
     outlet_id = $("#outlet_id").val();
     PurchaseReport.ajax.reload();
   });
@@ -4942,13 +4948,13 @@ $(document).ready(function () {
       { data: "purchase_date" },
       { data: "purchase_id" },
       { data: "supplier_name" },
-      { data: "product_name"},
-      { data: "quantity"},
-      { data: "rate",class: "total_rate text-right"},
+      { data: "product_name" },
+      { data: "quantity" },
+      { data: "rate", class: "total_rate text-right" },
       {
-        data: "total_amount",class: "total_amount text-right"
+        data: "total_amount", class: "total_amount text-right"
       },
-      { data: "purchased_by"},
+      { data: "purchased_by" },
     ],
     footerCallback: function (row, data, start, end, display) {
       var api = this.api();
@@ -4965,11 +4971,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Cost Price
@@ -4985,15 +4991,15 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
-      
-     
+
+
 
     },
   });
@@ -5003,7 +5009,7 @@ $(document).ready(function () {
   "use strict";
   var CSRF_TOKEN = $('[name="csrf_test_name"]').val();
   var base_url = $("#base_url").val();
-   var supplier_id = $("#supplier_id").val();
+  var supplier_id = $("#supplier_id").val();
   var currency = $("#currency").val();
   var from_date = $("#from_date").val();
   var to_date = $("#to_date").val();
@@ -5012,7 +5018,7 @@ $(document).ready(function () {
   $("#technician_id,#from_date, #to_date,#outlet_id").on("change", function (e) {
     from_date = $("#from_date").val();
     to_date = $("#to_date").val();
-    technician_id =  $("#technician_id").val();
+    technician_id = $("#technician_id").val();
     outlet_id = $("#outlet_id").val();
     table.ajax.reload();
   });
@@ -5106,8 +5112,8 @@ $(document).ready(function () {
       { data: "supplier_name" },
       { data: "item_name" },
       { data: "total_selling_price", class: "total_selling_price text-right" },
-      { data: "deduction"},
-      { data: "deduction_amount", class: "deduction_amount text-right"},
+      { data: "deduction" },
+      { data: "deduction_amount", class: "deduction_amount text-right" },
 
       {
         data: "expired_date",
@@ -5115,7 +5121,7 @@ $(document).ready(function () {
       {
         data: "due_date",
       },
-      { data: "status"},
+      { data: "status" },
     ],
     footerCallback: function (row, data, start, end, display) {
       var api = this.api();
@@ -5132,14 +5138,14 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
-        api
+      api
         .columns(".deduction_amount", {
           page: "current",
         })
@@ -5151,11 +5157,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Cost Price
@@ -5171,11 +5177,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Vat Price
@@ -5191,11 +5197,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Vat Price
@@ -5211,11 +5217,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Net Sales
@@ -5231,11 +5237,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Cost Price
@@ -5251,11 +5257,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
@@ -5272,15 +5278,15 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
-        api
+      api
         .columns(".cpr_amount", {
           page: "current",
         })
@@ -5292,11 +5298,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -5403,17 +5409,17 @@ $(document).ready(function () {
       { data: "customer_name" },
       { data: "product_id" },
       { data: "quantity" },
-      { data: "discount",class:"discount text-right" },
-      { data: "service_charge",class:"service_charge text-right" },
-      { data: "net_sales",class:"net_sales text-right" },
-      {data: "due",class:"due text-right" },
-      { data: "cash",class:"cash text-right" },
-      { data: "cheque",class:"cheque text-right" },
-      { data: "bank",class:"bank text-right" },
-      {data: "card",class:"card text-right" },
-      { data: "bkash",class:"bkash text-right" },
-      {data: "rocket",class:"rocket text-right" },
-      { data: "total_received_amount",class:"total_received_amount text-right" },
+      { data: "discount", class: "discount text-right" },
+      { data: "service_charge", class: "service_charge text-right" },
+      { data: "net_sales", class: "net_sales text-right" },
+      { data: "due", class: "due text-right" },
+      { data: "cash", class: "cash text-right" },
+      { data: "cheque", class: "cheque text-right" },
+      { data: "bank", class: "bank text-right" },
+      { data: "card", class: "card text-right" },
+      { data: "bkash", class: "bkash text-right" },
+      { data: "rocket", class: "rocket text-right" },
+      { data: "total_received_amount", class: "total_received_amount text-right" },
     ],
     footerCallback: function (row, data, start, end, display) {
       var api = this.api();
@@ -5430,11 +5436,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Cost Price
@@ -5450,11 +5456,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Vat Price
@@ -5470,11 +5476,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Vat Price
@@ -5490,11 +5496,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Net Sales
@@ -5510,11 +5516,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Cost Price
@@ -5530,11 +5536,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
@@ -5551,15 +5557,15 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
-        api
+      api
         .columns(".card", {
           page: "current",
         })
@@ -5571,14 +5577,14 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
-        api
+      api
         .columns(".bkash", {
           page: "current",
         })
@@ -5590,14 +5596,14 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
-        api
+      api
         .columns(".rocket", {
           page: "current",
         })
@@ -5609,14 +5615,14 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
-        api
+      api
         .columns(".total_received_amount", {
           page: "current",
         })
@@ -5628,11 +5634,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },
@@ -5651,7 +5657,7 @@ $(document).ready(function () {
   $("#technician_id,#from_date, #to_date,#outlet_id").on("change", function (e) {
     from_date = $("#from_date").val();
     to_date = $("#to_date").val();
-    technician_id =  $("#technician_id").val();
+    technician_id = $("#technician_id").val();
     outlet_id = $("#outlet_id").val();
     table.ajax.reload();
   });
@@ -5775,11 +5781,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Cost Price
@@ -5795,11 +5801,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Vat Price
@@ -5815,11 +5821,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Vat Price
@@ -5835,11 +5841,11 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
       //total Net Sales
@@ -5855,14 +5861,14 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
-      
+
 
       //total Cost Price
       api
@@ -5877,15 +5883,15 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
 
-        api
+      api
         .columns(".cpr_amount", {
           page: "current",
         })
@@ -5897,11 +5903,267 @@ $(document).ready(function () {
           }, 0);
           $(this.footer()).html(
             currency +
-              " " +
-              sum.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
+          );
+        });
+    },
+  });
+});
+//Technician Payment Report
+$(document).ready(function () {
+  "use strict";
+  var CSRF_TOKEN = $('[name="csrf_test_name"]').val();
+  var base_url = $("#base_url").val();
+  var currency = $("#currency").val();
+  var from_date = $("#from_date").val();
+  var to_date = $("#to_date").val();
+  var outlet_id = $("#outlet_id").val();
+
+  $("#technician_id,#from_date, #to_date,#outlet_id").on("change", function (e) {
+    from_date = $("#from_date").val();
+    to_date = $("#to_date").val();
+    technician_id = $("#technician_id").val();
+    outlet_id = $("#outlet_id").val();
+    table.ajax.reload();
+  });
+
+  var table = $("#AccountsReport").DataTable({
+    responsive: true,
+
+    aaSorting: [[1, "desc"]],
+    columnDefs: [{ bSortable: false, aTargets: [0, 1, 2, 3, 4, 5, 6] }],
+    processing: true,
+    serverSide: true,
+
+    lengthMenu: [
+      [10, 25, 50, 100, 250, 500, 1000],
+      [10, 25, 50, 100, 250, 500, "All"],
+    ],
+
+    dom: "'<'col-sm-4'l><'col-sm-4 text-center'><'col-sm-4'>Bfrtip",
+    buttons: [
+      {
+        extend: "copy",
+        className: "btn-sm prints",
+        footer: true,
+      },
+      {
+        extend: "csv",
+        title: "Technician Payment Report",
+        className: "btn-sm prints",
+        footer: true,
+      },
+      {
+        extend: "excel",
+        title: "Technician Payment Report",
+        className: "btn-sm prints",
+        footer: true,
+      },
+      {
+        extend: "pdf",
+        title: "Technician Payment Report",
+        className: "btn-sm prints",
+        footer: true,
+        orientation: "landscape",
+      },
+      {
+        extend: "print",
+        title: "<center>Technician Payment Report</center>",
+        className: "btn-sm prints",
+        footer: true,
+        customize: function (win) {
+          var last = null;
+          var current = null;
+          var bod = [];
+
+          var css = "@page { size: landscape; }",
+            head =
+              win.document.head || win.document.getElementsByTagName("head")[0],
+            style = win.document.createElement("style");
+
+          style.type = "text/css";
+          style.media = "print";
+
+          if (style.styleSheet) {
+            style.styleSheet.cssText = css;
+          } else {
+            style.appendChild(win.document.createTextNode(css));
+          }
+
+          head.appendChild(style);
+        },
+      },
+    ],
+
+    serverMethod: "post",
+    ajax: {
+      url: base_url + "Cservice/AccountsReport",
+      data: function (d) {
+        d.csrf_test_name = CSRF_TOKEN;
+        d.outlet_id = outlet_id;
+        d.from_date = from_date;
+        d.to_date = to_date;
+        d.technician_id = technician_id;
+      },
+    },
+    columns: [
+      { data: "sl" },
+      { data: "technician_name" },
+      { data: "outlet_name" },
+      { data: "total_selling_price", class: "total_selling_price text-right" },
+      { data: "total_purchase_price", class: "total_purchase_price text-right" },
+      { data: "gross_amount", class: "gross_amount text-right" },
+      {
+        data: "deduction_amount",
+        class: "deduction_amount text-right",
+        render: $.fn.dataTable.render.number(",", ".", 2, currency),
+      }],
+    footerCallback: function (row, data, start, end, display) {
+      var api = this.api();
+      //total gross profit
+      api
+        .columns(".total_selling_price", {
+          page: "current",
+        })
+        .every(function () {
+          var sum = this.data().reduce(function (a, b) {
+            var x = parseFloat(a) || 0;
+            var y = parseFloat(b) || 0;
+            return x + y;
+          }, 0);
+          $(this.footer()).html(
+            currency +
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
+          );
+        });
+      //total Cost Price
+      api
+        .columns(".total_purchase_price", {
+          page: "current",
+        })
+        .every(function () {
+          var sum = this.data().reduce(function (a, b) {
+            var x = parseFloat(a) || 0;
+            var y = parseFloat(b) || 0;
+            return x + y;
+          }, 0);
+          $(this.footer()).html(
+            currency +
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
+          );
+        });
+      //total Vat Price
+      api
+        .columns(".gross_amount", {
+          page: "current",
+        })
+        .every(function () {
+          var sum = this.data().reduce(function (a, b) {
+            var x = parseFloat(a) || 0;
+            var y = parseFloat(b) || 0;
+            return x + y;
+          }, 0);
+          $(this.footer()).html(
+            currency +
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
+          );
+        });
+      //total Vat Price
+      api
+        .columns(".deduction_amount", {
+          page: "current",
+        })
+        .every(function () {
+          var sum = this.data().reduce(function (a, b) {
+            var x = parseFloat(a) || 0;
+            var y = parseFloat(b) || 0;
+            return x + y;
+          }, 0);
+          $(this.footer()).html(
+            currency +
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
+          );
+        });
+      //total Net Sales
+      api
+        .columns(".net_amount", {
+          page: "current",
+        })
+        .every(function () {
+          var sum = this.data().reduce(function (a, b) {
+            var x = parseFloat(a) || 0;
+            var y = parseFloat(b) || 0;
+            return x + y;
+          }, 0);
+          $(this.footer()).html(
+            currency +
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
+          );
+        });
+
+
+      //total Cost Price
+      api
+        .columns(".net_salary", {
+          page: "current",
+        })
+        .every(function () {
+          var sum = this.data().reduce(function (a, b) {
+            var x = parseFloat(a) || 0;
+            var y = parseFloat(b) || 0;
+            return x + y;
+          }, 0);
+          $(this.footer()).html(
+            currency +
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
+          );
+        });
+
+      api
+        .columns(".cpr_amount", {
+          page: "current",
+        })
+        .every(function () {
+          var sum = this.data().reduce(function (a, b) {
+            var x = parseFloat(a) || 0;
+            var y = parseFloat(b) || 0;
+            return x + y;
+          }, 0);
+          $(this.footer()).html(
+            currency +
+            " " +
+            sum.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           );
         });
     },

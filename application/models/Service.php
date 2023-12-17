@@ -1315,17 +1315,13 @@ class Service extends CI_Model {
     }
      // Invoice Wise Item Details
      public function get_supplier_details($service_invoice_id) {
-        $this->db->select('supplier_information.supplier_name');
+        $this->db->select('product_purchase.due_amount,supplier_information.supplier_name,service_invoice_details.purchase_id');
         $this->db->join('product_purchase', 'product_purchase.purchase_id = service_invoice_details.purchase_id');
         $this->db->join('supplier_information', 'supplier_information.supplier_id = product_purchase.supplier_id');
         $this->db->where('service_invoice_details.service_invoice_id',$service_invoice_id);
         $query = $this->db->get('service_invoice_details')->result_array();
-        $suppliers = '';
-        foreach($query as $key => $value)
-        {
-            ($key == count($query) -1) ? $suppliers .= $value['supplier_name']. "<br>" : $suppliers .= $value['supplier_name']. " ,<br>";
-        }
-        return $suppliers;
+        
+        return $query;
     }
     
     public function TechnicianEarningReport($postData = null)
@@ -1410,6 +1406,9 @@ class Service extends CI_Model {
             $this->db->select("service_invoice.service_invoice_id,
             product_service.name as service_name,
             service_invoice.invoice_number,
+            service_invoice.time,
+            service_invoice.due_amount,
+            service_invoice.delivery_status,
             service_invoice.invoice_date,
             service_invoice.total_selling_price,
             service_invoice.total_purchase_price,
@@ -1462,17 +1461,23 @@ class Service extends CI_Model {
                 else{
                     $amount =  $net_amount * ($record->rate/100);
                 }
-            } 
+            }
+            $supplier_list = $this->get_supplier_details($record->service_invoice_id);
+            $suppliers = '';
+            foreach ($supplier_list as $key => $value) {
+                ($key == count($supplier_list) - 1) ? $suppliers .= $value['supplier_name'] . "<br>" : $suppliers .= $value['supplier_name'] . " ,<br>";
+            }
             $service_invoice_id = '<a href="' . $base_url . 'Cservice/service_invoice_print/' . $record->service_invoice_id . '" class="" >' . $record->invoice_number . '</a>';
             $data[] = array(
                 'sl'            =>   $sl,
                 'service_invoice_id'  =>  $service_invoice_id,
-                'invoice_date'  =>  $record->invoice_date,
+                'purchase_id'  =>  $supplier_list[0]['purchase_id'],
+                'invoice_date'  =>  $record->invoice_date . "<br>". $record->time,
                 'technician_name'  =>  $record->first_name. " ".$record->last_name ,
                 'customer_name'  =>  $record->customer_name . " <br>". $record->customer_mobile,
                 'service_name'  =>  $record->service_name,
                 'item_name'  =>  $this->get_product_details($record->service_invoice_id),
-                'supplier_name'  =>  $this->get_supplier_details($record->service_invoice_id),
+                'supplier_name'  => $suppliers,
                 'total_selling_price'  =>  number_format((float)$record->total_selling_price, 2, '.', ''),
                 'total_purchase_price'  =>  number_format((float)$record->total_purchase_price, 2, '.', ''),
                 'gross_amount'  =>  number_format((float)($record->total_selling_price -$record->total_purchase_price), 2, '.', ''),
@@ -2572,6 +2577,99 @@ class Service extends CI_Model {
                 'technician_percentage'  =>  $record->rate . " %",
                 'net_salary'  =>  number_format((float)$amount, 2, '.', ''),
                 'cpr_amount'  => number_format((float)($record->total_selling_price -$record->total_purchase_price)-($record->deduction_amount ? $record->deduction_amount : 0) - $amount, 2, '.', ''),
+            );
+            $sl++;
+        }
+        ## Response
+        if ($data) {
+            $response = array(
+                "draw" => intval($draw),
+                "iTotalRecords" => $totalRecordwithFilter,
+                "iTotalDisplayRecords" => $totalRecords,
+                "aaData" =>  $data,
+            );
+        } else {
+            $response = array(
+                "draw" => intval($draw),
+                "iTotalRecords" => 0,
+                "iTotalDisplayRecords" => 0,
+                "aaData" =>  array(),
+            );
+        }
+        return $response;
+    }
+    public function AccountsReport($postData = null)
+    {
+
+        $this->load->model('Warehouse');
+        $this->load->model('suppliers');
+        $response = array();
+        $from_date = $this->input->post('from_date', TRUE);
+        $to_date = $this->input->post('to_date', TRUE);
+        $outlet_id = $this->input->post('outlet_id', TRUE);
+        $technician_id = $this->input->post('technician_id', TRUE);
+        if ($outlet_id == '') {
+            $outlet_id = $this->Warehouse->outlet_or_cw_logged_in()[0]['outlet_id'];
+        } elseif ($outlet_id === 'All') {
+            $outlet_id = null;
+        } else {
+            $outlet_id = $this->input->post('outlet_id', TRUE);;
+        }
+        $draw = $postData['draw'];
+        $start = $postData['start'];
+        $rowperpage = $postData['length']; // Rows display per page
+        $columnIndex = $postData['order'][0]['column']; // Column index
+        $columnName = $postData['columns'][$columnIndex]['data']; // Column name
+        $columnSortOrder = $postData['order'][0]['dir']; // asc or desc
+        $searchValue = $postData['search']['value']; // Search value
+
+        ## Search
+        $searchQuery = "";
+        if ($searchValue != '') {
+            $searchQuery = " (p.product_name like '%"
+            . $searchValue .
+                "%') ";
+        }
+        $this->db->select("
+            acc_transaction.*
+            ");
+        $this->db->join('acc_coa', 'acc_coa.HeadCode = acc_transaction.COAID', 'left');
+        $this->db->from('acc_transaction');
+        $this->db->where('acc_transaction.credit > ' ,0);
+        if ($searchValue != '')
+            $this->db->where($searchQuery);
+        $records = $this->db->get()->result();
+        echo "<pre>";
+        print_r($records);
+        exit();
+        $data = array();
+        $sl = 1;
+        $base_url = base_url();
+
+        foreach ($records as $record) {
+
+            $net_amount = ($record->total_selling_price - $record->total_purchase_price) - ($record->deduction_amount ? $record->deduction_amount : 0);
+            if ($record->rate == 0) {
+                $amount = 0.00;
+            } else {
+                if (($record->total_purchase_price - $record->total_selling_price) == 0) {
+                    $amount = 0.00;
+                } else {
+                    $amount =  $net_amount * ($record->rate / 100);
+                }
+            }
+            $data[] = array(
+                'sl'            =>   $sl,
+                'technician_name'  =>  $record->first_name . " " . $record->last_name,
+                'outlet_name'  =>  $record->outlet_name ? $record->outlet_name : "Central Warehouse",
+                'total_selling_price'  =>  number_format((float)$record->total_selling_price, 2, '.', ''),
+                'total_purchase_price'  =>  number_format((float)$record->total_purchase_price, 2, '.', ''),
+                'gross_amount'  =>  number_format((float)($record->total_selling_price - $record->total_purchase_price), 2, '.', ''),
+                'deduction_amount'  => $record->deduction_amount ? number_format((float)$record->deduction_amount, 2, '.', '') : 0.00,
+                'net_amount'  => number_format((float)$net_amount, 2, '.', ''),
+                'technician_percentage'  =>  $record->rate . " %",
+                'net_salary'  =>  number_format((float)$amount, 2, '.', ''),
+                'cpr_amount'  => number_format((float)($record->total_selling_price - $record->total_purchase_price) - ($record->deduction_amount ? $record->deduction_amount : 0) - $amount, 2, '.', ''),
             );
             $sl++;
         }

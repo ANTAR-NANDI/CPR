@@ -52,7 +52,7 @@
                     </div>
                     <div class="panel-body">
                         <input type="hidden" name="" id="pr_status" value="<?= $pr_status ?>">
-                        
+
 
                         <div class="row">
 
@@ -64,44 +64,43 @@
                                 <label class="" for="to_date"><?php echo display('end_date') ?></label>
                                 <input type="text" name="to_date" class="form-control datepicker" id="to_date" placeholder="<?php echo display('end_date') ?>" value="" autocomplete="off">
                             </div>
-                            <?php 
+                            <?php
                             $this->load->model('Warehouse');
                             $outlet_id = $this->Warehouse->outlet_or_cw_logged_in()[0]['outlet_id'];
-                            if($outlet_id == "HK7TGDT69VFMXB7")
-                            {
+                            if ($outlet_id == "HK7TGDT69VFMXB7") {
                             ?>
 
-                           <div class="col-md-6" style="margin-bottom: 10px;">
-                                <label for="product_sku" class="col-form-label">Outlet: </label>
-                                <select name="outlet_id" class="form-control" id="outlet_id" required=""  tabindex="3">
-                                <option selected value="">Select...</option>
-                                    <?php foreach($cw_list as $cw){?>
-                                        <option  value="<?php echo html_escape($cw['warehouse_id'])?>"><?php echo html_escape($cw['central_warehouse']) ;?></option>
-                                    <?php }?>
-                                    <?php foreach($outlet_list as $outlet){?>
-                                        <option value="<?php echo html_escape($outlet['outlet_id'])?>"><?php echo html_escape($outlet['outlet_name']) ;?></option>
-                                    <?php }?>
+                                <div class="col-md-6" style="margin-bottom: 10px;">
+                                    <label for="product_sku" class="col-form-label">Outlet: </label>
+                                    <select name="outlet_id" class="form-control" id="outlet_id" required="" tabindex="3">
+                                        <option selected value="">Select...</option>
+                                        <?php foreach ($cw_list as $cw) { ?>
+                                            <option value="<?php echo html_escape($cw['warehouse_id']) ?>"><?php echo html_escape($cw['central_warehouse']); ?></option>
+                                        <?php } ?>
+                                        <?php foreach ($outlet_list as $outlet) { ?>
+                                            <option value="<?php echo html_escape($outlet['outlet_id']) ?>"><?php echo html_escape($outlet['outlet_name']); ?></option>
+                                        <?php } ?>
 
-                                    <option value="All">Consolidated</option>
-                                  
+                                        <option value="All">Consolidated</option>
 
 
-                                </select>
 
-                            </div>
-                            <?php 
+                                    </select>
+
+                                </div>
+                            <?php
                             }
                             ?>
-          <div class="col-sm-6">
+                            <div class="col-sm-6">
                                 <label for="cat_list" class="col-form-label">Technician : </label>
                                 <select name="technician_id" id="technician_id" required class="form-control">
-                                <option value="">Select</option>
+                                    <option value="">Select</option>
                                     <?php
                                     foreach ($technician_list as $technician) {
                                     ?>
                                         <option value="<?php echo $technician['user_id']; ?>"><?php echo $technician['first_name'] . " " . $technician['last_name']; ?></option>
                                     <?php
-                                    
+
                                     }
                                     ?>
                                 </select>
@@ -112,43 +111,28 @@
                         <div>
 
                             <div class="table-responsive" id="printableArea">
-                                <table class="table table-striped table-bordered" cellspacing="0" width="100%" id="TechnicianEarningReport">
+                                <table class="table table-striped table-bordered" cellspacing="0" width="100%" id="AccountsReport">
                                     <thead>
                                         <tr>
                                             <th class="text-center"><?php echo display('sl') ?></th>
-                                            <th class="text-center">Invoice ID</th>
-                                            <th class="text-center">Invoice Date</th>
-                                            <th class="text-center">Technician Name</th>
-                                            <th class="text-center">Customer Name</th>
-                                            <th class="text-center">Service Name</th>
-                                            <th class="text-center">Item Name</th>
-                                            <th class="text-center">Supplier Name</th>
-                                            <th class="text-center">Selling Price</th>
-                                            <th class="text-center">Cost Price</th>
-                                            <th class="text-center">Gross Amount</th>
-                                            <th class="text-center">Warrenty/Deduction</th>
-                                            <th class="text-center">Net Amount</th>
-                                            <th class="text-center">Technician Percentage</th>
-                                            <th class="text-center">Net Salary</th>
-                                            <th class="text-center">CPR Amount</th>
+                                            <th class="text-center">COA</th>
+                                            <th class="text-center">CASH</th>
+                                            <th class="text-center">BANK</th>
+                                            <th class="text-center">BKASH</th>
+                                            <th class="text-center">CARD</th>
+                                            <th class="text-center">TOTAL</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <th colspan="7" class="text-right"><?php echo display('total') ?> :</th>
+                                            <th colspan="2" class="text-right"><?php echo display('total') ?> :</th>
                                             <th></th>
                                             <th></th>
                                             <th></th>
                                             <th></th>
                                             <th></th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-
-
                                         </tr>
 
                                     </tfoot>
@@ -156,8 +140,8 @@
                                 </table>
                             </div>
                         </div>
-                         <input type="hidden" id="currency" value="{currency}" name=""> 
-                        
+                        <input type="hidden" id="currency" value="{currency}" name="">
+
                     </div>
                 </div>
             </div>

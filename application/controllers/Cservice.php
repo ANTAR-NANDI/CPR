@@ -1081,11 +1081,11 @@ class Cservice extends CI_Controller {
         $this->template->full_admin_html_view($content);
     }
     //Technician Payment Report Ajax Call
-    public function AccountReport()
+    public function AccountsReport()
     {
         $this->load->model('Service');
         $postData = $this->input->post();
-        $data = $this->Service->TechnicianPaymentReport($postData, null);
+        $data = $this->Service->AccountsReport($postData, null);
         echo json_encode($data);
     }
 
